@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import logo from "../assets/shared/logo.svg";
-import hamburger from "../assets/shared/icon-hamburger.svg";
 
 import moonImg from "../assets/destination/image-moon.png";
 import "./Destination.scss";
@@ -11,11 +9,7 @@ function Destination() {
   var [num, setNum] = useState(0);
   return (
     <>
-      <header>
-        <img id="logo" src={logo} alt="Company Logo" />
-        <img src={hamburger} alt="menu button" />
-      </header>
-      <main>
+      <main className="destination">
         <p className="top">
           <span>01</span>PICK YOUR DESTINATION
         </p>

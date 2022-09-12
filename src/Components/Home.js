@@ -1,17 +1,10 @@
 import React from "react";
 import "./Home.scss";
 
-import logo from "../assets/shared/logo.svg";
-import hamburger from "../assets/shared/icon-hamburger.svg";
-
 function Home() {
   return (
     <div className="mainHome">
-      <header>
-        <img id="logo" src={logo} alt="Company Logo" />
-        <img src={hamburger} alt="menu button" />
-      </header>
-      <main>
+      <main id="home">
         <div className="content">
           <p>So, you want to travel to</p>
           <h1>SPACE</h1>
