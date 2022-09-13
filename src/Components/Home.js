@@ -16,7 +16,7 @@ function Home() {
             world experience!
           </p>
         </div>
-        <Link to="/destinations">
+        <Link className="link" to="/destinations">
           <div id="explore">
             <h3>EXPLORE</h3>
           </div>
