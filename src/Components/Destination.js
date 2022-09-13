@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 
 import moonImg from "../assets/destination/image-moon.png";
+import marsImg from "../assets/destination/image-mars.png";
+import europaImg from "../assets/destination/image-europa.png";
+import titanImg from "../assets/destination/image-titan.png";
 import "./Destination.scss";
 
 import data from "../assets/data.json";
 
 function Destination() {
   var [num, setNum] = useState(0);
+
+  const images = [moonImg, marsImg, europaImg, titanImg];
   return (
     <>
       <main className="destination">
         <p className="top">
           <span>01</span>PICK YOUR DESTINATION
         </p>
-        <img className="earth" src={moonImg} width="150px" alt="Moon" />
+        <img className="earth" src={images[num]} width="150px" alt="Moon" />
 
         <ul id="destinations">
           <li id="moon" onClick={() => setNum(0)}>

@@ -31,7 +31,7 @@ function Menu({ setMenu }) {
             </Link>
           </li>
           <li>
-            <Link className="item" to="/" onClick={() => setMenu(false)}>
+            <Link className="item" to="/crew" onClick={() => setMenu(false)}>
               <span className="white">02</span>CREW
             </Link>
           </li>
