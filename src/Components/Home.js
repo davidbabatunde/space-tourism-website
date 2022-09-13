@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 function Home() {
@@ -15,9 +16,11 @@ function Home() {
             world experience!
           </p>
         </div>
-        <div id="explore">
-          <h3>EXPLORE</h3>
-        </div>
+        <Link to="/destinations">
+          <div id="explore">
+            <h3>EXPLORE</h3>
+          </div>
+        </Link>
       </main>
     </div>
   );
