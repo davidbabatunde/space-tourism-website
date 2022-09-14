@@ -10,8 +10,42 @@ function Crew() {
   var [member, setMember] = useState(0);
   const images = [picture1, picture2, picture3, picture4];
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe || isRightSwipe) {
+      isLeftSwipe
+        ? member === 4
+          ? setMember(1)
+          : setMember(member + 1)
+        : member === 1
+        ? setMember(4)
+        : setMember(member - 1);
+    }
+    // add your conditional logic here
+  };
+
   return (
-    <div id="crew">
+    <div
+      id="crew"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <p className="top">
         <span>02</span>MEET YOUR CREW
       </p>
