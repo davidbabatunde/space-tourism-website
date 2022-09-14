@@ -36,7 +36,11 @@ function Menu({ setMenu }) {
             </Link>
           </li>
           <li>
-            <Link className="item" to="/" onClick={() => setMenu(false)}>
+            <Link
+              className="item"
+              to="/technology"
+              onClick={() => setMenu(false)}
+            >
               <span className="white">03</span>TECHNOLOGY
             </Link>
           </li>
