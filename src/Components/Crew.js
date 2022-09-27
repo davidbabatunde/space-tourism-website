@@ -27,15 +27,21 @@ function Crew() {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    if (isLeftSwipe || isRightSwipe) {
-      isLeftSwipe
-        ? member === 4
-          ? setMember(1)
-          : setMember(member + 1)
-        : member === 1
-        ? setMember(4)
-        : setMember(member - 1);
+
+    if (isLeftSwipe) {
+      member === 4 ? setMember(1) : setMember(member + 1);
     }
+    if (isRightSwipe) {
+      member === 1 ? setMember(4) : setMember(member - 1);
+    }
+
+    // ? member === 4
+    //   // ? setMember(1)
+    //   : setMember(member + 1)
+    // : member === 1
+    // ? setMember(4)
+    // : setMember(member - 1);
+
     // add your conditional logic here
   };
 

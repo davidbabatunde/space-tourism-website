@@ -35,8 +35,19 @@
 
     <title>Space Tour</title>
   </head>
-  <body id="mybody">
+  <body style:{BackgroundImage}>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      const BackgroundImage = {
+        backgroundImage: `url(${
+          screenSize >= 768
+            ? DesktopCrew
+            : screenSize >= 480
+            ? TabletCrew
+            : MobileCrew
+        })`,
+      };
+    </script>
   </body>
 </html>
