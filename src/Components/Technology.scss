@@ -4,3 +4,12 @@
   height: 300px;
   width: calc(100% + 2rem);
 }
+
+#technology {
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  min-height: 100vh;
+}

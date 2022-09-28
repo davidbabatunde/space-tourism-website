@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 function Home({ setMenu }) {
   return (
-    <>
+    <div id="home">
       <Navbar setMenu={setMenu} />
       <div className="mainHome">
         <main id="home">
@@ -24,7 +24,7 @@ function Home({ setMenu }) {
           </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }
 

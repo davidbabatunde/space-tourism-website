@@ -1,9 +1,10 @@
-body {
+#destination {
   background-image: url("../assets/destination/background-destination-mobile.jpg");
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
+  min-height: 100vh;
 }
 
 .destination {

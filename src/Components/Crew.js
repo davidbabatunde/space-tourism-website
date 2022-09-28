@@ -63,10 +63,10 @@ function Crew({ setMenu }) {
   };
 
   return (
-    <>
+    <div id="crew">
       <Navbar setMenu={setMenu} />
       <div
-        id="crew"
+        id="major"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
@@ -103,7 +103,7 @@ function Crew({ setMenu }) {
           <p className="bio">{data.crew[member].bio}</p>
         </article>
       </div>
-    </>
+    </div>
   );
 }
 

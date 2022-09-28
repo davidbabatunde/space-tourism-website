@@ -14,7 +14,7 @@ function Destination({ setMenu }) {
 
   const images = [moonImg, marsImg, europaImg, titanImg];
   return (
-    <>
+    <div id="destination">
       <Navbar setMenu={setMenu} />
       <main className="destination">
         <p className="top">
@@ -52,7 +52,7 @@ function Destination({ setMenu }) {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

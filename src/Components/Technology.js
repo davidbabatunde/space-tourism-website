@@ -12,9 +12,9 @@ function Technology({ setMenu }) {
   const images = [picture1, picture2, picture3];
 
   return (
-    <>
+    <div id="technology">
       <Navbar setMenu={setMenu} />
-      <div id="crew">
+      <div id="major">
         <p className="top">
           <span>03</span>SPACE LAUNCH 101
         </p>
@@ -63,7 +63,7 @@ function Technology({ setMenu }) {
           <p className="bio">{data.technology[tech].description}</p>
         </article>
       </div>
-    </>
+    </div>
   );
 }
 
