@@ -12,9 +12,10 @@ import Technology from "./Components/Technology";
 function App() {
   const [menu, setMenu] = useState(false);
   return (
-    <Router>
-      <>
-        <Navbar setMenu={setMenu} />
+    <>
+      <Navbar setMenu={setMenu} />
+
+      <Router>
         <Routes>
           <Route path="/" element={<Home setMenu={setMenu} />} />
           <Route path="/destinations" element={<Destination />} />
@@ -22,8 +23,8 @@ function App() {
           <Route path="/technology" element={<Technology />} />
         </Routes>
         {menu && <Menu setMenu={setMenu} />}
-      </>
-    </Router>
+      </Router>
+    </>
   );
 }
 
