@@ -1,3 +1,6 @@
 .techHero {
   object-fit: cover;
+  object-position: center;
+  height: 300px;
+  width: calc(100% + 2rem);
 }

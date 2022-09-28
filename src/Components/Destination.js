@@ -5,15 +5,17 @@ import marsImg from "../assets/destination/image-mars.png";
 import europaImg from "../assets/destination/image-europa.png";
 import titanImg from "../assets/destination/image-titan.png";
 import "./Destination.scss";
+import Navbar from "./Navbar";
 
 import data from "../assets/data.json";
 
-function Destination() {
+function Destination({ setMenu }) {
   var [num, setNum] = useState(0);
 
   const images = [moonImg, marsImg, europaImg, titanImg];
   return (
     <>
+      <Navbar setMenu={setMenu} />
       <main className="destination">
         <p className="top">
           <span>01</span>PICK YOUR DESTINATION

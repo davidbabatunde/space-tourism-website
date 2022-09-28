@@ -5,26 +5,25 @@ import "./App.css";
 import Destination from "./Components/Destination";
 import Home from "./Components/Home";
 import Menu from "./Components/Menu";
-import Navbar from "./Components/Navbar";
+
 import Crew from "./Components/Crew";
 import Technology from "./Components/Technology";
 
 function App() {
   const [menu, setMenu] = useState(false);
   return (
-    <>
-      <Navbar setMenu={setMenu} />
-
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home setMenu={setMenu} />} />
-          <Route path="/destinations" element={<Destination />} />
-          <Route path="/crew" element={<Crew />} />
-          <Route path="/technology" element={<Technology />} />
-        </Routes>
-        {menu && <Menu setMenu={setMenu} />}
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home setMenu={setMenu} />} />
+        <Route
+          path="/destinations"
+          element={<Destination setMenu={setMenu} />}
+        />
+        <Route path="/crew" element={<Crew setMenu={setMenu} />} />
+        <Route path="/technology" element={<Technology setMenu={setMenu} />} />
+      </Routes>
+      {menu && <Menu setMenu={setMenu} />}
+    </Router>
   );
 }
 
