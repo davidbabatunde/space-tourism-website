@@ -22,14 +22,13 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0;
-  height: 100vh;
-  // min-height: 100vh;
+  min-height: 100vh;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  // justify-content: space-evenly;
   align-items: center;
   gap: 3rem;
   padding: 1rem;
