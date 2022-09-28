@@ -30,20 +30,36 @@ function Crew({ setMenu }) {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
-      member === 4 ? setMember(1) : setMember(member + 1);
+      member === 3 ? handleChange(0) : handleChange(member + 1);
     }
     if (isRightSwipe) {
-      member === 1 ? setMember(4) : setMember(member - 1);
+      member === 0 ? handleChange(3) : handleChange(member - 1);
     }
+  };
 
-    // ? member === 4
-    //   // ? setMember(1)
-    //   : setMember(member + 1)
-    // : member === 1
-    // ? setMember(4)
-    // : setMember(member - 1);
-
-    // add your conditional logic here
+  const handleChange = (r) => {
+    setMember(r);
+    if (r === 0) {
+      document.getElementById("member1").classList.add("active");
+      document.getElementById("member2").classList.remove("active");
+      document.getElementById("member3").classList.remove("active");
+      document.getElementById("member4").classList.remove("active");
+    } else if (r === 1) {
+      document.getElementById("member1").classList.remove("active");
+      document.getElementById("member2").classList.add("active");
+      document.getElementById("member3").classList.remove("active");
+      document.getElementById("member4").classList.remove("active");
+    } else if (r === 2) {
+      document.getElementById("member1").classList.remove("active");
+      document.getElementById("member2").classList.remove("active");
+      document.getElementById("member3").classList.add("active");
+      document.getElementById("member4").classList.remove("active");
+    } else if (r === 3) {
+      document.getElementById("member1").classList.remove("active");
+      document.getElementById("member2").classList.remove("active");
+      document.getElementById("member3").classList.remove("active");
+      document.getElementById("member4").classList.add("active");
+    }
   };
 
   return (
@@ -63,46 +79,22 @@ function Crew({ setMenu }) {
           <div
             id="member1"
             className="indicator active"
-            onClick={() => {
-              document.getElementById("member1").classList.add("active");
-              document.getElementById("member2").classList.remove("active");
-              document.getElementById("member3").classList.remove("active");
-              document.getElementById("member4").classList.remove("active");
-              setMember(0);
-            }}
+            onClick={() => handleChange(0)}
           ></div>
           <div
             id="member2"
             className="indicator"
-            onClick={() => {
-              document.getElementById("member1").classList.remove("active");
-              document.getElementById("member2").classList.add("active");
-              document.getElementById("member3").classList.remove("active");
-              document.getElementById("member4").classList.remove("active");
-              setMember(1);
-            }}
+            onClick={() => handleChange(1)}
           ></div>
           <div
             id="member3"
             className="indicator"
-            onClick={() => {
-              document.getElementById("member1").classList.remove("active");
-              document.getElementById("member2").classList.remove("active");
-              document.getElementById("member3").classList.add("active");
-              document.getElementById("member4").classList.remove("active");
-              setMember(2);
-            }}
+            onClick={() => handleChange(2)}
           ></div>
           <div
             id="member4"
             className="indicator"
-            onClick={() => {
-              document.getElementById("member1").classList.remove("active");
-              document.getElementById("member2").classList.remove("active");
-              document.getElementById("member3").classList.remove("active");
-              document.getElementById("member4").classList.add("active");
-              setMember(3);
-            }}
+            onClick={() => handleChange(3)}
           ></div>
         </div>
         <article>
