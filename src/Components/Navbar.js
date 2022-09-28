@@ -1,5 +1,4 @@
 import "./Navbar.scss";
-
 import logo from "../assets/shared/logo.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
 

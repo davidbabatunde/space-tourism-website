@@ -15,7 +15,7 @@ function Technology() {
       <p className="top">
         <span>03</span>SPACE LAUNCH 101
       </p>
-      <img className="hero" src={images[tech]} alt="Technology" />
+      <img className="techHero" src={images[tech]} alt="Technology" />
       <div className="container">
         <div
           id="one"
