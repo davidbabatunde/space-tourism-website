@@ -22,8 +22,8 @@ function App() {
           <Route path="/crew" element={<Crew />} />
           <Route path="/technology" element={<Technology />} />
         </Routes>
+        {menu && <Menu setMenu={setMenu} />}
       </Router>
-      {menu && <Menu setMenu={setMenu} />}
     </>
   );
 }
