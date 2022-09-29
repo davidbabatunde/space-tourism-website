@@ -38,10 +38,6 @@ h2 {
   gap: 1rem;
 }
 
-#moon {
-  border-bottom: 2px solid white;
-}
-
 .description {
   text-align: center;
 }
@@ -82,4 +78,8 @@ p {
   height: 1px;
   background-color: white;
   margin: 1rem auto;
+}
+
+.dActive {
+  border-bottom: 2px solid white;
 }

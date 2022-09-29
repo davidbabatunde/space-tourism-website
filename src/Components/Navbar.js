@@ -7,7 +7,7 @@ import React from "react";
 function Navbar({ setMenu }) {
   return (
     <header>
-      <img id="logo" src={logo} alt="Company Logo" />
+      <img id="logo" src={logo} height="40px" alt="Company Logo" />
       <img src={hamburger} onClick={() => setMenu(true)} alt="menu button" />
     </header>
   );

@@ -13,6 +13,32 @@ function Destination({ setMenu }) {
   var [num, setNum] = useState(0);
 
   const images = [moonImg, marsImg, europaImg, titanImg];
+
+  const handleChange = (r) => {
+    setNum(r);
+    if (r === 0) {
+      document.getElementById("moon").classList.add("dActive");
+      document.getElementById("mars").classList.remove("dActive");
+      document.getElementById("europa").classList.remove("dActive");
+      document.getElementById("titan").classList.remove("dActive");
+    } else if (r === 1) {
+      document.getElementById("moon").classList.remove("dActive");
+      document.getElementById("mars").classList.add("dActive");
+      document.getElementById("europa").classList.remove("dActive");
+      document.getElementById("titan").classList.remove("dActive");
+    } else if (r === 2) {
+      document.getElementById("moon").classList.remove("dActive");
+      document.getElementById("mars").classList.remove("dActive");
+      document.getElementById("europa").classList.add("dActive");
+      document.getElementById("titan").classList.remove("dActive");
+    } else if (r === 3) {
+      document.getElementById("moon").classList.remove("dActive");
+      document.getElementById("mars").classList.remove("dActive");
+      document.getElementById("europa").classList.remove("dActive");
+      document.getElementById("titan").classList.add("dActive");
+    }
+  };
+
   return (
     <div id="destination">
       <Navbar setMenu={setMenu} />
@@ -23,16 +49,16 @@ function Destination({ setMenu }) {
         <img className="earth" src={images[num]} width="150px" alt="Moon" />
 
         <ul id="destinations">
-          <li id="moon" onClick={() => setNum(0)}>
+          <li id="moon" onClick={() => handleChange(0)}>
             MOON
           </li>
-          <li id="mars" onClick={() => setNum(1)}>
+          <li id="mars" onClick={() => handleChange(1)}>
             MARS
           </li>
-          <li id="europa" onClick={() => setNum(2)}>
+          <li id="europa" onClick={() => handleChange(2)}>
             EUROPA
           </li>
-          <li id="titan" onClick={() => setNum(3)}>
+          <li id="titan" onClick={() => handleChange(3)}>
             TITAN
           </li>
         </ul>
