@@ -49,7 +49,7 @@ function Destination({ setMenu }) {
         <img className="earth" src={images[num]} width="150px" alt="Moon" />
 
         <ul id="destinations">
-          <li id="moon" onClick={() => handleChange(0)}>
+          <li id="moon" className="dActive" onClick={() => handleChange(0)}>
             MOON
           </li>
           <li id="mars" onClick={() => handleChange(1)}>
