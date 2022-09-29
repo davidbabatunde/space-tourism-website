@@ -46,7 +46,7 @@ function Destination({ setMenu }) {
         <p className="top">
           <span>01</span>PICK YOUR DESTINATION
         </p>
-        <img className="earth" src={images[num]} width="150px" alt="Moon" />
+        <img className="earth" src={images[num]} width="170px" alt="Moon" />
 
         <ul id="destinations">
           <li id="moon" className="dActive" onClick={() => handleChange(0)}>
@@ -63,7 +63,9 @@ function Destination({ setMenu }) {
           </li>
         </ul>
         <h2>{data.destinations[num].name}</h2>
-        <p className="description">{data.destinations[num].description}</p>
+        <div className="pee">
+          <p className="description">{data.destinations[num].description}</p>
+        </div>
 
         <div className="line"></div>
 

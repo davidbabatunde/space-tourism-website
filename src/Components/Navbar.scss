@@ -2,6 +2,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 4vw;
   height: 80px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#menu-list {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+  #menu-list {
+    display: flex;
+    gap: 2rem;
+
+    .item {
+      color: rgb(219, 217, 217);
+    }
+  }
+  .white {
+    display: none;
+  }
 }
