@@ -72,3 +72,15 @@ article {
 .active {
   background-color: white;
 }
+
+@media (min-width: 768px) {
+  #crew {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (min-width: 1250px) {
+  #crew {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
+}

@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4vw;
+  padding: 10px 4vw;
   height: 80px;
 }
 
@@ -14,6 +14,16 @@ ul {
   display: none;
 }
 
+header li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navActive {
+  border-bottom: 3px solid white;
+}
+
 @media (min-width: 768px) {
   #hamburger {
     display: none;
@@ -21,12 +31,26 @@ ul {
   #menu-list {
     display: flex;
     gap: 2rem;
+    height: 100%;
+    align-items: center;
 
     .item {
       color: rgb(219, 217, 217);
+      text-decoration: none;
     }
   }
   .white {
     display: none;
+  }
+}
+
+@media (min-width: 1250px) {
+  .white {
+    display: block;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
 }

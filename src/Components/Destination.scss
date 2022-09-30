@@ -113,3 +113,9 @@ p {
     width: calc(100% - 30vw);
   }
 }
+
+@media (min-width: 1250px) {
+  #destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+}

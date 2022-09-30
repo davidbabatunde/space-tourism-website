@@ -14,3 +14,15 @@
   margin-bottom: 0;
   min-height: 100vh;
 }
+
+@media (min-width: 768px) {
+  #technology {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media (min-width: 1250px) {
+  #technology {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}
